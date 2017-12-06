@@ -1,0 +1,47 @@
+$primary: rgb(77, 133, 242);
+$secondary: #ffffff;
+$complementary: #a6a6a6;
+$background: #f3f6f9;
+$black: ($primary - 60);
+$success: #6ebd63;
+$important: #e03d44;
+
+@import "Header";
+@import "ViewCustomerPage";
+@import "CustomerSearch";
+@import "CustomerList";
+@import "CustomerForm";
+@import "EditCustomerPage";
+@import "HelpPage";
+@import "LoginPage";
+@import "buttons";
+
+* {
+
+}
+
+html{
+  font-family: Roboto, Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #222222;
+}
+
+.loading_container{
+  z-index: 1;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $important;
+  transition: opacity 1s;
+  color: white;
+  img{
+    height: 250px;
+    position: absolute;
+  }
+}
+
+
+

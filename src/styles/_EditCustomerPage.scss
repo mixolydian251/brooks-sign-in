@@ -1,0 +1,26 @@
+.section_label{
+  padding-left: 5vw;
+}
+.remove_button_layout{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+  .remove_button_container{
+    width: 73vw;
+    height: 100px;
+    .remove_button{
+      height: 100%;
+      width: 100%;
+      font-size: 18px;
+      color: white;
+      background-color: #222222;
+      text-shadow: 1px 1px 0 #222222 - 30;
+      border-bottom: 8px solid #222222 - 15;
+    }
+  }
+
+}
