@@ -2,10 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 import Header from '../components/Header'
-import Loading from '../components/Loading';
+
 
 export const PrivateRoute = ({
-    isLoading,
     isAuthenticated,
     component: Component,
     ...rest
@@ -13,7 +12,6 @@ export const PrivateRoute = ({
     <Route {...rest} component={(props) => (
         isAuthenticated ? (
             <div>
-                {isLoading && <Loading/>}
                 <Header/>
                 <Component {...props}/>
             </div>
@@ -26,7 +24,6 @@ export const PrivateRoute = ({
 
 const mapStateToProps = (state) => ({
     isAuthenticated: !!state.auth.uid,
-    isLoading: state.loading.loading
 });
 
 export default connect(mapStateToProps)(PrivateRoute)

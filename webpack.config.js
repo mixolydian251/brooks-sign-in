@@ -1,5 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = (env) => {
     const isProduction = env === 'production';
@@ -42,7 +43,12 @@ module.exports = (env) => {
             }]
         },
         plugins: [
-            CSSExtract
+            new webpack.DefinePlugin({
+                'process.env': {
+                    'NODE_ENV': JSON.stringify('production')
+                }
+            }),
+            CSSExtract,
         ],
         devtool: isProduction ? 'source-map' :'inline-source-map', // show my code in console when I run into an error instead of bundle.js
         devServer: {

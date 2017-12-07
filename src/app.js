@@ -21,16 +21,17 @@ const jsx = (
 );
 
 let hasRendered = false;
+
 const renderApp = () => {
     if (!hasRendered){
         ReactDOM.render(jsx, document.getElementById('app'));
-        const load = document.getElementById('loading');
-        load.style.opacity = '0';
         hasRendered = true;
 
+        const load = document.getElementById('loading');
+        load.style.opacity = '0';
         setTimeout(()=> {
             store.dispatch(toggleLoading())
-        }, 1000)
+        }, 1500)
     }
 };
 

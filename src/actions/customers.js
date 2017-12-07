@@ -1,5 +1,4 @@
 import uuid from 'uuid'
-import moment from 'moment';
 import database from '../firebase/firebase';
 
 export const addCustomer = (customer) => ({
@@ -101,7 +100,6 @@ export const setCustomers = (customers) => ({
 
 export const startSetCustomers = () => {
     return (dispatch, getState) => {
-        console.log(getState().auth);
         const uid = getState().auth.uid;
         return database.ref(`users/${uid}/customers`).once('value').then((snapshot) => {
             const customers = [];

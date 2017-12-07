@@ -21,7 +21,7 @@ $important: #e03d44;
 }
 
 html{
-  font-family: Roboto, Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #f7f7f7;
   color: #222222;
 }
@@ -35,7 +35,7 @@ html{
   align-items: center;
   justify-content: center;
   background-color: $important;
-  transition: opacity 1s;
+  transition: opacity 1.5s;
   color: white;
   img{
     height: 250px;

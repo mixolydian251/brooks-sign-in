@@ -90,6 +90,7 @@
   grid-area: Edit;
   width: 40%;
   height: 100px;
+  border: none;
   .edit_button{
     height: 100%;
     width: 100%;
@@ -97,6 +98,7 @@
     color: white;
     background-color: $primary;
     text-shadow: 1px 1px 0 $primary - 30;
+    border: none;
     border-bottom: 8px solid $primary - 15;
   }
   .edit_button:hover{
@@ -115,6 +117,7 @@
     color: white;
     background-color: $important;
     text-shadow: 1px 1px 0 $important - 30;
+    border: none;
     border-bottom: 8px solid $important - 15;
   }
   .cancel_button:hover{

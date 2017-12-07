@@ -21,10 +21,12 @@ WORKDIR /usr/src/app
 COPY package.json package.json
 
 # install dependencies and clean up cache using "npm cache clean"
-RUN apk add --no-cache libc6-compat && npm install && npm cache verify
+RUN apk add --no-cache make gcc g++ python && yarn install
 
 # Copy everything from current local directory to current container directory
 COPY . .
+
+RUN yarn run build:prod
 
 EXPOSE 3000
 
