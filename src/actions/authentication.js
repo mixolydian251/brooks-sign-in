@@ -1,24 +1,25 @@
-import { firebase, emailAuthProvider, googleAuthProvider } from "../firebase/firebase"
+import {
+  firebase,
+  googleAuthProvider
+} from '../firebase/firebase';
 
-
-
-export const login = (uid) => ({
-    type: 'LOGIN',
-    uid
+export const login = uid => ({
+  type: 'LOGIN',
+  uid
 });
 
 export const startLogin = () => {
-    return (dispatch) => {
-        return firebase.auth().signInWithRedirect(googleAuthProvider)
-    };
+  return dispatch => {
+    return firebase.auth().signInWithRedirect(googleAuthProvider);
+  };
 };
 
 export const logout = () => ({
-    type: 'LOGOUT',
+  type: 'LOGOUT'
 });
 
 export const startLogout = () => {
-    return (dispatch) => {
-        return firebase.auth().signOut();
-    };
+  return dispatch => {
+    return firebase.auth().signOut();
+  };
 };

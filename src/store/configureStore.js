@@ -5,17 +5,16 @@ import filtersReducer from '../reducers/filters';
 import authReducer from '../reducers/authentication';
 import loadingReducer from '../reducers/loading';
 
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default () => {
-    return createStore(
-        combineReducers({
-            customers: customersReducer,
-            filters: filtersReducer,
-            auth: authReducer,
-            loading: loadingReducer
-        }),
-        composeEnhancers(applyMiddleware(thunk))
-    );
-}
+  return createStore(
+    combineReducers({
+      customers: customersReducer,
+      filters: filtersReducer,
+      auth: authReducer,
+      loading: loadingReducer
+    }),
+    composeEnhancers(applyMiddleware(thunk))
+  );
+};
