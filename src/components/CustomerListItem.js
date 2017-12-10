@@ -3,12 +3,7 @@ import moment from 'moment';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-const CustomerListItem = ({
-  id,
-  name,
-  age,
-  dependants,
-}) => {
+const CustomerListItem = ({ id, name, age, dependants }) => {
   return (
     <Link className="list_items" to={`/view/${id}`}>
       <h3>{name}</h3>

@@ -6,9 +6,12 @@ import { startEditSingleProp } from '../actions/customers';
 
 class ViewCustomerPage extends React.Component {
   state = {
-    alreadySignedIn: false
+    alreadySignedIn: false,
+    showAllVisits: false
   };
-
+  showAllVisits = () => {
+    this.setState(prevState => ({ showAllVisits: !prevState.showAllVisits }));
+  };
   sortVisits = () => {
     if (this.props.customer.visits !== false) {
       return this.props.customer.visits.sort((a, b) => {
@@ -141,7 +144,19 @@ class ViewCustomerPage extends React.Component {
             <b>
               <p>Visits:</p>
             </b>
-            {this.showVisits(5)}
+            {this.props.customer.visits !== false &&
+            this.state.showAllVisits === true &&
+            this.props.customer.visits.length > 3
+              ? this.showVisits(this.props.customer.visits.length)
+              : this.showVisits(3)}
+            <div className="show_visit_container">
+              <button
+                className="show_visit_button"
+                onClick={this.showAllVisits}
+              >
+                {this.state.showAllVisits ? 'Show less' : 'Show more'}
+              </button>
+            </div>
           </div>
 
           <div className="item">
@@ -161,25 +176,46 @@ class ViewCustomerPage extends React.Component {
 
         <div className="limited_item_layout">
           <div className="limited_item">
-            <h3>
-              <b>Coats this year:</b>
+            <div>
+              <b>Coats this winter season:</b>
               <span>
                 {this.props.customer.coats !== false
-                  ? this.props.customer.coats.filter(
-                      createdAt =>
-                        moment(createdAt).format('YYYY') ===
+                  ? this.props.customer.coats.filter(createdAt => {
+                      if (
+                        moment(createdAt).format('YYYY') === /// If coat received in the current year
                         moment().format('YYYY')
-                    ).length
+                      ) {
+                        if (
+                          Number(moment().format('M')) < 10 || // If the current month is before October, Or
+                          Number(moment(createdAt).format('M')) >= 10
+                        ) {
+                          // (after October) If the coat was received after October, 1st
+                          return createdAt;
+                        }
+                      } else if (
+                        Number(moment(createdAt).format('YYYY')) -
+                          Number(moment().format('YYYY')) ===
+                        -1 // If coat received last year
+                      ) {
+                        if (
+                          Number(moment().format('M')) < 10 && // If the current month is before Oct
+                          Number(moment(createdAt).format('M')) >= 10 // and the coat was received after Oct 1st, last year.
+                        ) {
+                          return createdAt;
+                        }
+                      }
+                    }).length
                   : 0}
               </span>
-            </h3>
+            </div>
+            <p className="reset_text">(Resets October 1st of each year)</p>
             <button className="coat_button" onClick={this.addCoat}>
               Add Coat
             </button>
           </div>
 
           <div className="limited_item">
-            <h3>
+            <div>
               <b>Shoes this year:</b>
               <span>
                 {this.props.customer.shoes !== false
@@ -190,7 +226,8 @@ class ViewCustomerPage extends React.Component {
                     ).length
                   : 0}
               </span>
-            </h3>
+            </div>
+            <p className="reset_text">(Resets January 1st of each year)</p>
             <button className="shoes_button" onClick={this.addShoes}>
               Add Pair of Shoes
             </button>

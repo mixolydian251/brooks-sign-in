@@ -30,6 +30,11 @@
   }
 }
 
+.reset_text{
+  font-weight: 100;
+  font-size: 14px;
+}
+
 .error{
   grid-area: error;
   .multiple_sign_in{
@@ -38,7 +43,23 @@
   }
 }
 
-
+.show_visit_container{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  .show_visit_button{
+    background-color: transparent;
+    border: none;
+    color: #4a4da1;
+  }
+  .show_visit_button:hover{
+    font-weight: 500;
+    color: #7579ff;
+  }
+  .show_visit_button:focus{
+    outline: none;
+  }
+}
 
 .view_customer_items{
   grid-area: info;
