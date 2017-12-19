@@ -30,7 +30,7 @@ const renderApp = () => {
     load.style.opacity = '0';
     setTimeout(() => {
       store.dispatch(toggleLoading());
-    }, 1500);
+    }, 1000);
   }
 };
 

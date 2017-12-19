@@ -26,9 +26,9 @@ RUN apk add --no-cache make gcc g++ python && yarn install
 # Copy everything from current local directory to current container directory
 COPY . .
 
-RUN yarn run build:prod
+RUN npm run build:prod
 
-EXPOSE 3000
+EXPOSE 3002
 
 # CMD may vary depending on how your start script
 

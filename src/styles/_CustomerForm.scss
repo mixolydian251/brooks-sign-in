@@ -1,16 +1,44 @@
 .form_container{
   display: flex;
   flex-direction: column;
+
   .form_item{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     min-height: 60px;
-    .form_text_bar{
-      padding-left: 8px;
-      margin: 0.75em;
-      width: 400px;
-      height: 30px;
+    .text_bar_container {
+      display: flex;
+      width: 100%;
+      .form_text_bar{
+        padding-left: 8px;
+        margin: 12px;
+        width: 400px;
+        height: 30px;
+      }
+    }
+    .form_label{
+      font-weight: 500;
+      width: 120px;
+      min-width: 120px;
+      margin-left: 5vw;
+    }
+  }
+
+  .form_name_item{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 60px;
+    .text_bar_container{
+      display: flex;
+      width: 100%;
+      .name_text_bar{
+        padding-left: 8px;
+        margin: 12px;
+        width: 182px;
+        height: 30px;
+      }
     }
     .form_label{
       font-weight: 500;
@@ -51,6 +79,7 @@
   .dependant_card{
     background-color: #a1e3e3;
     border-bottom: 8px solid #a1e3e3 - 10;
+    box-shadow: 5px 6px 6px white - 70;
     .form_item{
       display: flex;
       justify-content: flex-start;
@@ -91,4 +120,28 @@
   .dependant{
     grid-template-columns: 1fr;
   }
+
+  .form_container{
+    .form_item {
+      .text_bar_container{
+        .form_text_bar {
+          width: calc(100% - 33px);
+        }
+      }
+    }
+
+    .form_name_item{
+      .text_bar_container{
+        flex-direction: column;
+        .name_text_bar{
+          width: calc(100% - 37px);
+        }
+      }
+      .form_label{
+        height: 100px;
+      }
+    }
+  }
+
+
 }

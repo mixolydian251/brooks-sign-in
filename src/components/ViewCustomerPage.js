@@ -104,7 +104,7 @@ class ViewCustomerPage extends React.Component {
       <div className="view_customer_wrapper">
         <div className="view_customer_items">
           <div className="item">
-            <h1>{this.props.customer.name}</h1>
+            <h1>{`${this.props.customer.firstName} ${this.props.customer.lastName}`}</h1>
           </div>
           <div className="item">
             <p>

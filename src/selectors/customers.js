@@ -3,9 +3,10 @@
 export default (customers, { text }) => {
   return customers
     .filter(customer => {
+      const name = `${customer.firstName} ${customer.lastName}`;
       return (
         typeof text !== 'string' ||
-        customer.name.toLowerCase().includes(text.toLowerCase())
+        name.toLowerCase().includes(text.toLowerCase())
       );
     })
     .sort();

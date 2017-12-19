@@ -11,7 +11,8 @@ export const startAddCustomer = (customerData = {}) => {
     const uid = getState().auth.uid;
 
     const {
-      name = '',
+      firstName = '',
+      lastName = '',
       age = 0,
       address = {
         address: '',
@@ -25,7 +26,8 @@ export const startAddCustomer = (customerData = {}) => {
       visits = false
     } = customerData;
     const customer = {
-      name,
+      firstName,
+      lastName,
       age,
       address,
       coats,

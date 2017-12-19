@@ -10,32 +10,39 @@
     width: 25%;
     margin: 0;
     padding: 24px 0;
+    text-align: center;
   }
   h3{
+    text-align: start;
     font-weight: 800;
   }
   a{
     font-weight: 500;
     font-size: 15px;
     color: #222222;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     text-decoration: none;
   }
   a:hover{
-    color: #4c84f1;
+    color: #0063eb;
   }
   .list_items{
     width: 97vw;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: #f0d9da;
+    border-left: 4px solid #f0d9da + 15;
+    border-bottom: 6px solid #f0d9da - 15;
+    box-shadow: 3px 4px 6px white - 70;
     span{
      width: 25%;
     }
   }
   .list_items:nth-child(odd){
     background-color: #d7a6a7;
+    border-left: 4px solid #d7a6a7 + 15;
+    border-bottom: 6px solid #d7a6a7 - 15;
   }
 }
 

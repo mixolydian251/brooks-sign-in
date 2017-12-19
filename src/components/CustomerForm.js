@@ -1,13 +1,14 @@
 import React from 'react';
-import moment from 'moment';
-import uuid from 'uuid';
+// import moment from 'moment';
+// import uuid from 'uuid';
 import DependantFormItem from './DependantFormItem';
 import { addDependant } from '../actions/customers';
 import { Link } from 'react-router-dom';
 
 class CustomerForm extends React.Component {
   state = {
-    name: this.props.customer ? this.props.customer.name : '',
+    firstName: this.props.customer ? this.props.customer.firstName : '',
+    lastName: this.props.customer ? this.props.customer.lastName : '',
     age: this.props.customer ? this.props.customer.age : '',
     address: this.props.customer
       ? {
@@ -53,10 +54,14 @@ class CustomerForm extends React.Component {
       }));
     }
   };
-  onNameChange = e => {
-    const name = e.target.value;
-    this.setState(() => ({ name }));
+  onFirstNameChange = e => {
+    const firstName = e.target.value;
+    this.setState(() => ({ firstName }));
   };
+    onLastNameChange = e => {
+        const lastName = e.target.value;
+        this.setState(() => ({ lastName }));
+    };
   onAgeChange = e => {
     const age = e.target.value;
     this.setState(() => ({ age }));
@@ -110,7 +115,8 @@ class CustomerForm extends React.Component {
   SubmitCustomer = e => {
     e.preventDefault();
     if (
-      this.state.name &&
+      this.state.firstName &&
+      this.state.lastName &&
       this.state.age &&
       this.state.address.address &&
       (!this.state.phoneNumber ||
@@ -120,7 +126,8 @@ class CustomerForm extends React.Component {
     ) {
       this.setState(() => ({ error: false }));
       this.props.onSubmitCustomer({
-        name: this.state.name,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
         age: this.state.age,
         address: {
           address: this.state.address.address,
@@ -150,31 +157,45 @@ class CustomerForm extends React.Component {
     return (
       <div>
         <form className="form_container" onSubmit={this.SubmitCustomer}>
-          <div className="form_item">
+          <div className="form_name_item">
             <div className="form_label">Name:</div>
-            <input
-              autoFocus
-              className="form_text_bar"
-              type="text"
-              placeholder="Name"
-              value={this.state.name}
-              onChange={this.onNameChange}
-            />
+
+            <div className="text_bar_container">
+              <input
+                autoFocus
+                className="name_text_bar"
+                type="text"
+                placeholder="First Name"
+                value={this.state.firstName}
+                onChange={this.onFirstNameChange}
+              />
+              <input
+                  className="name_text_bar"
+                  type="text"
+                  placeholder="Last Name"
+                  value={this.state.lastName}
+                  onChange={this.onLastNameChange}
+              />
+            </div>
+
           </div>
 
           <div className="form_item">
             <div className="form_label">Age:</div>
-            <input
-              className="form_text_bar"
-              type="number"
-              placeholder="Age"
-              value={this.state.age}
-              onChange={this.onAgeChange}
-            />
+            <div className="text_bar_container"><input
+                className="form_text_bar"
+                type="number"
+                placeholder="Age"
+                value={this.state.age}
+                onChange={this.onAgeChange}
+            /></div>
+
           </div>
 
           <div className="form_item">
             <div className="form_label">Address:</div>
+
+            <div className="text_bar_container">
             <input
               className="form_text_bar"
               type="text"
@@ -182,10 +203,13 @@ class CustomerForm extends React.Component {
               value={this.state.address.address}
               onChange={this.onAddressChange}
             />
+            </div>
           </div>
 
           <div className="form_item">
             <div className="form_label">City:</div>
+
+            <div className="text_bar_container">
             <input
               className="form_text_bar"
               type="text"
@@ -193,10 +217,13 @@ class CustomerForm extends React.Component {
               value={this.state.address.city}
               onChange={this.onAddressCityChange}
             />
+            </div>
           </div>
 
           <div className="form_item">
             <div className="form_label">State:</div>
+
+            <div className="text_bar_container">
             <input
               className="form_text_bar"
               type="text"
@@ -204,10 +231,13 @@ class CustomerForm extends React.Component {
               value={this.state.address.state}
               onChange={this.onAddressStateChange}
             />
+            </div>
           </div>
 
           <div className="form_item">
             <div className="form_label">Phone Number:</div>
+
+            <div className="text_bar_container">
             <input
               className="form_text_bar"
               type="text"
@@ -215,6 +245,7 @@ class CustomerForm extends React.Component {
               value={this.state.phoneNumber}
               onChange={this.onPhoneNumberChange}
             />
+            </div>
           </div>
 
           {this.state.phoneNumberError && (

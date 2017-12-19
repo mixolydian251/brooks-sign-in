@@ -2,7 +2,7 @@
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 0.5em;
+  grid-gap: 1em;
   grid-template-areas:
           'info   limited'
           'error  error'
@@ -15,14 +15,16 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin-right: 0.5em;
+  margin-right: 1em;
   max-height: 500px;
   background-color: #f0d9da;
+  box-shadow: 5px 6px 6px white - 70;
   .limited_item{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 1em;
   }
   span{
     padding-left: 8px;
@@ -68,7 +70,8 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-left: 0.5em;
+  margin-left: 1em;
+  box-shadow: 5px 6px 6px white - 70;
   .today{
     font-weight: bold;
     color: #2da728;
@@ -105,10 +108,10 @@
             'button';
   }
   .view_customer_items{
-    margin-right: 0.5em;
+    margin-right: 1em;
   }
   .limited_item_layout{
-    margin-left: 0.5em;
+    margin-left: 1em;
     padding-bottom: 20px;
   }
   .button_layout{

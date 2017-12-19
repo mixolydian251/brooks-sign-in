@@ -17,9 +17,25 @@
       width: 100%;
       font-size: 18px;
       color: white;
-      background-color: #222222;
-      text-shadow: 1px 1px 0 #222222 - 30;
-      border-bottom: 8px solid #222222 - 15;
+      background-color: #333333;
+      text-shadow: 1px 1px 0 #333333 - 30;
+      border-left: 5px solid #333333 + 15;
+      border-bottom: 8px solid #333333 - 15;
+      box-shadow: 5px 6px 6px white - 70;
+    }
+    .remove_button:hover{
+      background-color: #333333 + 15;
+      text-shadow: 1px 1px 0 #333333;
+      border-left: 5px solid #333333 + 30;
+      border-bottom: 8px solid #333333 ;
+    }
+    .remove_button:active{
+      border-left: none;
+      border-bottom: 3px solid #333333;
+      box-shadow: 2px 2px 4px white - 70;
+    }
+    .remove_button:focus{
+      outline: none;
     }
   }
 
