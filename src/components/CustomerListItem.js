@@ -1,7 +1,7 @@
 import React from 'react';
-import moment from 'moment';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { capitalize } from "../utils/index"
 
 const CustomerListItem = ({ id, firstName, lastName, age, dependants }) => {
   const handleDependants = () => {
@@ -12,7 +12,7 @@ const CustomerListItem = ({ id, firstName, lastName, age, dependants }) => {
   };
   return (
     <Link className="list_items" to={`/view/${id}`}>
-      <h3>{`${firstName} ${lastName}`}</h3>
+      <h3>{`${capitalize(firstName)} ${capitalize(lastName)}`}</h3>
       <span>{`Age: ${age}`}</span>
       <span>{`Dependants: ${handleDependants()}`}</span>
     </Link>

@@ -3,6 +3,7 @@ import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { startEditSingleProp } from '../actions/customers';
+import { capitalize } from "../utils/index"
 
 class ViewCustomerPage extends React.Component {
   state = {
@@ -104,7 +105,12 @@ class ViewCustomerPage extends React.Component {
       <div className="view_customer_wrapper">
         <div className="view_customer_items">
           <div className="item">
-            <h1>{`${this.props.customer.firstName} ${this.props.customer.lastName}`}</h1>
+            <h1>
+              {`
+                ${capitalize(this.props.customer.firstName)}
+                ${capitalize(this.props.customer.lastName)}
+              `}
+              </h1>
           </div>
           <div className="item">
             <p>
@@ -134,7 +140,7 @@ class ViewCustomerPage extends React.Component {
             {this.props.customer.dependants !== false &&
               this.props.customer.dependants.map(dependant => {
                 return (
-                  <p key={dependant.name}>{`${dependant.name}, ${
+                  <p key={dependant.name}>{`${capitalize(dependant.name)}, ${
                     dependant.age
                   }`}</p>
                 );

@@ -1,0 +1,10 @@
+.idea
+node_modules
+public/bundle.js
+public/style.css
+public/images
+.env.development
+.env.production
+.env.test
+yarn.lock
+yarn-error.log
