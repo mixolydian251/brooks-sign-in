@@ -1,6 +1,5 @@
-.remove_dependant{
-
-  .remove_button{
+.remove_dependant {
+  .remove_button {
     padding-bottom: 7px;
     display: flex;
     justify-content: flex-end;
@@ -14,13 +13,12 @@
     font-size: 18px;
     color: grey;
   }
-  .remove_button:hover{
+  .remove_button:hover {
     color: $important + 50;
   }
-
 }
 
-.logout_button{
+.logout_button {
   width: 22vw;
   background-color: transparent;
   border: none;
@@ -29,7 +27,7 @@
   font-family: Roboto, Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.coat_button{
+.coat_button {
   width: 50%;
   height: 75px;
   color: white;
@@ -41,22 +39,22 @@
   border-left: 5px solid #9090bf;
   box-shadow: 5px 6px 6px #f0d9da - 70;
 }
-.coat_button:hover{
+.coat_button:hover {
   background-color: #686bbf + 30;
   text-shadow: 1px 1px 0 #686bbf;
   border-left: 5px solid #9090bf + 15;
   border-bottom: 8px solid #686bbf + 15;
 }
-.coat_button:active{
+.coat_button:active {
   transition: all 10ms;
   border-left: none;
   border-bottom: 3px solid #686bbf + 15;
   box-shadow: 2px 2px 4px #f0d9da - 70;
 }
-.coat_button:focus{
+.coat_button:focus {
   outline: none;
 }
-.shoes_button{
+.shoes_button {
   width: 50%;
   height: 75px;
   color: white;
@@ -68,23 +66,23 @@
   border-left: 5px solid #ffd653;
   box-shadow: 5px 6px 6px #f0d9da - 70;
 }
-.shoes_button:hover{
+.shoes_button:hover {
   background-color: #ffc107 + 20;
   text-shadow: 1px 1px 0 #ffc107;
   border-left: 5px solid #ffd653 + 15;
   border-bottom: 8px solid #ffc107 + 5;
 }
-.shoes_button:active{
+.shoes_button:active {
   transition: all 10ms;
   border-left: none;
   border-bottom: 3px solid #ffc107 + 5;
   box-shadow: 2px 2px 4px #f0d9da - 70;
 }
-.shoes_button:focus{
+.shoes_button:focus {
   outline: none;
 }
 
-.sign_in_button{
+.sign_in_button {
   grid-area: signIn;
   width: 40%;
   height: 100px;
@@ -97,28 +95,28 @@
   border-left: 5px solid $success + 15;
   box-shadow: 5px 6px 6px white - 70;
 }
-.sign_in_button:hover{
+.sign_in_button:hover {
   background-color: $success + 15;
   text-shadow: 1px 1px 0 $success;
   border-left: 5px solid $success + 30;
   border-bottom: 8px solid $success;
 }
-.sign_in_button:active{
+.sign_in_button:active {
   transition: all 10ms;
   border-left: none;
   border-bottom: 3px solid $success;
   box-shadow: 2px 2px 4px white - 70;
 }
-.sign_in_button:focus{
+.sign_in_button:focus {
   outline: none;
 }
 
-.edit_button_container{
+.edit_button_container {
   grid-area: Edit;
   width: 40%;
   height: 100px;
   border: none;
-  .edit_button{
+  .edit_button {
     height: 100%;
     width: 100%;
     font-size: 18px;
@@ -130,22 +128,22 @@
     border-left: 5px solid $primary + 15;
     box-shadow: 5px 6px 6px white - 70;
   }
-  .edit_button:hover{
+  .edit_button:hover {
     background-color: $primary + 15;
     text-shadow: 1px 1px 0 $primary;
     border: none;
     border-left: 5px solid $primary + 30;
     border-bottom: 8px solid $primary;
   }
-  .edit_button:active{
+  .edit_button:active {
     border-left: none;
     border-bottom: 3px solid $primary;
     box-shadow: 2px 2px 4px white - 70;
   }
-  .edit_button:focus{
+  .edit_button:focus {
     outline: none;
   }
-  .cancel_button{
+  .cancel_button {
     height: 100%;
     width: 100%;
     font-size: 18px;
@@ -157,23 +155,23 @@
     border-left: 5px solid $important + 15;
     box-shadow: 5px 6px 6px white - 70;
   }
-  .cancel_button:hover{
+  .cancel_button:hover {
     background-color: $important + 15;
     text-shadow: 1px 1px 0 $important;
     border-left: 5px solid $important + 30;
     border-bottom: 8px solid $important;
   }
-  .cancel_button:active{
+  .cancel_button:active {
     border-left: none;
     border-bottom: 3px solid $important;
     box-shadow: 2px 2px 4px white - 70;
   }
-  .cancel_button:focus{
+  .cancel_button:focus {
     outline: none;
   }
 }
 
-.button_layout{
+.button_layout {
   grid-area: button;
   width: 100vw;
   display: flex;

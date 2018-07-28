@@ -6,27 +6,26 @@ $black: ($primary - 60);
 $success: #6ebd63;
 $important: #e03d44;
 
-@import "Header";
-@import "ViewCustomerPage";
-@import "CustomerSearch";
-@import "CustomerList";
-@import "CustomerForm";
-@import "EditCustomerPage";
-@import "HelpPage";
-@import "LoginPage";
-@import "buttons";
+@import 'Header';
+@import 'ViewCustomerPage';
+@import 'CustomerSearch';
+@import 'CustomerList';
+@import 'CustomerForm';
+@import 'EditCustomerPage';
+@import 'HelpPage';
+@import 'LoginPage';
+@import 'buttons';
 
 * {
-
 }
 
-html{
+html {
   font-family: Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   background-color: #f7f7f7;
   color: #222222;
 }
 
-.loading_container{
+.loading_container {
   z-index: 1;
   position: absolute;
   height: 100vh;
@@ -37,11 +36,8 @@ html{
   background-color: $important;
   transition: opacity 1s;
   color: white;
-  img{
+  img {
     height: 250px;
     position: absolute;
   }
 }
-
-
-

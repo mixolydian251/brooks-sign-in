@@ -21,8 +21,7 @@ const EditCustomerPage = props => {
             className="remove_button"
             onClick={() => {
               const remove = confirm(
-                'Are you sure you want to remove this customer?' +
-                  ' This cannot be undone.'
+                'Are you sure you want to remove this customer?' + ' This cannot be undone.'
               );
               if (remove) {
                 props.dispatch(startRemoveCustomer({ id: props.customer.id }));
@@ -41,9 +40,7 @@ const EditCustomerPage = props => {
 
 const mapStateToProps = (state, props) => {
   return {
-    customer: state.customers.find(
-      customer => customer.id === props.match.params.id
-    )
+    customer: state.customers.find(customer => customer.id === props.match.params.id)
   };
 };
 

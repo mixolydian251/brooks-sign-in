@@ -1,7 +1,7 @@
-.section_label{
+.section_label {
   padding-left: 5vw;
 }
-.remove_button_layout{
+.remove_button_layout {
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -9,10 +9,10 @@
   align-items: center;
   margin-top: 0;
   margin-bottom: 50px;
-  .remove_button_container{
+  .remove_button_container {
     width: 73vw;
     height: 100px;
-    .remove_button{
+    .remove_button {
       height: 100%;
       width: 100%;
       font-size: 18px;
@@ -23,20 +23,19 @@
       border-bottom: 8px solid #333333 - 15;
       box-shadow: 5px 6px 6px white - 70;
     }
-    .remove_button:hover{
+    .remove_button:hover {
       background-color: #333333 + 15;
       text-shadow: 1px 1px 0 #333333;
       border-left: 5px solid #333333 + 30;
-      border-bottom: 8px solid #333333 ;
+      border-bottom: 8px solid #333333;
     }
-    .remove_button:active{
+    .remove_button:active {
       border-left: none;
       border-bottom: 3px solid #333333;
       box-shadow: 2px 2px 4px white - 70;
     }
-    .remove_button:focus{
+    .remove_button:focus {
       outline: none;
     }
   }
-
 }

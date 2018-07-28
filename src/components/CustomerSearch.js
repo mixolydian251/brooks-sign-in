@@ -6,6 +6,7 @@ class CustomerSearch extends React.Component {
   componentDidMount() {
     this.props.dispatch(setTextFilter(''));
   }
+
   render() {
     return (
       <div className="search_bar_container">

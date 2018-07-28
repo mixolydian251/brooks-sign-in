@@ -1,15 +1,15 @@
-.view_customer_wrapper{
+.view_customer_wrapper {
   margin-top: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 1em;
   grid-template-areas:
-          'info   limited'
-          'error  error'
-          'button button';
+    'info   limited'
+    'error  error'
+    'button button';
 }
 
-.limited_item_layout{
+.limited_item_layout {
   grid-area: limited;
   display: flex;
   flex-direction: column;
@@ -19,51 +19,51 @@
   max-height: 500px;
   background-color: #f0d9da;
   box-shadow: 5px 6px 6px white - 70;
-  .limited_item{
+  .limited_item {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1em;
   }
-  span{
+  span {
     padding-left: 8px;
     font-size: 23px;
   }
 }
 
-.reset_text{
+.reset_text {
   font-weight: 100;
   font-size: 14px;
 }
 
-.error{
+.error {
   grid-area: error;
-  .multiple_sign_in{
+  .multiple_sign_in {
     text-align: center;
     color: $important;
   }
 }
 
-.show_visit_container{
+.show_visit_container {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  .show_visit_button{
+  .show_visit_button {
     background-color: transparent;
     border: none;
     color: #4a4da1;
   }
-  .show_visit_button:hover{
+  .show_visit_button:hover {
     font-weight: 500;
     color: #7579ff;
   }
-  .show_visit_button:focus{
+  .show_visit_button:focus {
     outline: none;
   }
 }
 
-.view_customer_items{
+.view_customer_items {
   grid-area: info;
   color: black;
   display: flex;
@@ -72,28 +72,27 @@
   justify-content: flex-start;
   margin-left: 1em;
   box-shadow: 5px 6px 6px white - 70;
-  .today{
+  .today {
     font-weight: bold;
     color: #2da728;
   }
-  .item{
+  .item {
     width: 100%;
     background-color: #e3f3ff;
-    h1{
+    h1 {
       padding: 0 8px;
     }
-    p{
+    p {
       padding: 0 32px;
     }
-    span{
+    span {
       padding-left: 6px;
       font-size: 18px;
       font-weight: bold;
     }
   }
-  .item:nth-child(odd){
+  .item:nth-child(odd) {
     background-color: #c3dbe3;
-
   }
 }
 
@@ -102,19 +101,19 @@
     grid-template-columns: 1fr;
     grid-auto-rows: auto;
     grid-template-areas:
-            'info'
-            'limited'
-            'error'
-            'button';
+      'info'
+      'limited'
+      'error'
+      'button';
   }
-  .view_customer_items{
+  .view_customer_items {
     margin-right: 1em;
   }
-  .limited_item_layout{
+  .limited_item_layout {
     margin-left: 1em;
     padding-bottom: 20px;
   }
-  .button_layout{
+  .button_layout {
     margin-top: 0;
   }
 }

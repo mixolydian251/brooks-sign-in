@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { capitalize } from "../utils/index"
+import { capitalize } from '../utils/index';
 
 const CustomerListItem = ({ id, firstName, lastName, age, dependants }) => {
   const handleDependants = () => {
-    if(dependants){
+    if (dependants) {
       return dependants.length;
     }
     return 0;

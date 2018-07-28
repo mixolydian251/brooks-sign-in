@@ -19,6 +19,7 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.5.2",
     "babel-preset-react": "^6.24.1",
+    "chart.js": "^2.7.2",
     "compression": "^1.7.1",
     "compression-webpack-plugin": "^1.0.1",
     "css-loader": "^0.28.4",
@@ -33,6 +34,7 @@
     "normalize.css": "^7.0.0",
     "react": "^15.6.1",
     "react-addons-shallow-compare": "^15.6.0",
+    "react-chartjs-2": "^2.7.4",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router-dom": "^4.1.2",
@@ -40,6 +42,7 @@
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.18.2",
+    "styled-components": "^3.3.3",
     "uuid": "^3.1.0",
     "validator": "^8.0.0",
     "webpack": "^3.1.0"

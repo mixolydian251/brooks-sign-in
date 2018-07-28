@@ -1,47 +1,44 @@
-.help_page_wrapper{
-  img{
+.help_page_wrapper {
+  img {
     box-shadow: 1px 2px 16px 6px white - 70;
   }
-  h1{
+  h1 {
     padding: 8px;
   }
-  p, h3, h4{
+  p,
+  h3,
+  h4 {
     padding: 0 2em;
   }
-  .image_container{
+  .image_container {
     width: 100vw;
     display: flex;
     justify-content: center;
   }
-
 }
 
 @media only screen and (max-width: 610px) {
-  .help_page_wrapper{
-    .image_container{
-      .search{
+  .help_page_wrapper {
+    .image_container {
+      .search {
         width: 300px;
-        height: 205px ;
+        height: 205px;
       }
-      .profile{
+      .profile {
         width: 300px;
-        height: 274px ;
-
+        height: 274px;
       }
-      .visits{
+      .visits {
         width: 300px;
-        height: 161px ;
-
+        height: 161px;
       }
-      .create{
+      .create {
         width: 300px;
-        height: 295px ;
-
+        height: 295px;
       }
-      .dependant{
+      .dependant {
         width: 300px;
-        height: 70px ;
-
+        height: 70px;
       }
     }
   }

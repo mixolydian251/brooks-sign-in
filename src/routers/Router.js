@@ -8,6 +8,7 @@ import CreateCustomerPage from '../components/CreateCustomerPage';
 import EditCustomerPage from '../components/EditCustomerPage';
 import ViewCustomerPage from '../components/ViewCustomerPage';
 import HelpPage from '../components/HelpPage';
+import AnalyticsPage from '../components/AnalyticsPage';
 import NotFoundPage from '../components/NotFoundPage';
 import PrivateRoute from './PrivateRoute';
 import PublicRoute from './PublicRoute';
@@ -26,6 +27,7 @@ const AppRouter = ({ isLoading }) => (
         <PrivateRoute path="/edit/:id" component={EditCustomerPage} />
         <PrivateRoute path="/view/:id" component={ViewCustomerPage} />
         <PrivateRoute path="/help" component={HelpPage} />
+        <PrivateRoute path="/analytics" component={AnalyticsPage} />
         <PublicRoute component={NotFoundPage} />
       </Switch>
     </div>

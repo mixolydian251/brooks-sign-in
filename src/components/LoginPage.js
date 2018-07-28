@@ -7,11 +7,7 @@ class LoginPage extends React.Component {
     return (
       <div className="login_container">
         <h1>Login to Brooks</h1>
-        <button
-          autoFocus
-          className="login_button"
-          onClick={this.props.startLogin}
-        >
+        <button autoFocus className="login_button" onClick={this.props.startLogin}>
           Login
         </button>
       </div>

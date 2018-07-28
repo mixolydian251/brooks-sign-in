@@ -59,11 +59,7 @@ class DependantFormItem extends React.Component {
         </div>
 
         <div className="remove_dependant">
-          <button
-            type="button"
-            onClick={this.removeDependant}
-            className="remove_button"
-          >
+          <button type="button" onClick={this.removeDependant} className="remove_button">
             Remove
           </button>
         </div>
