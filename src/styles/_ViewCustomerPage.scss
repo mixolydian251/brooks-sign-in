@@ -18,7 +18,7 @@
   margin-right: 1em;
   max-height: 500px;
   background-color: #f0d9da;
-  box-shadow: 5px 6px 6px white - 70;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   .limited_item {
     width: 100%;
     display: flex;
@@ -71,7 +71,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   margin-left: 1em;
-  box-shadow: 5px 6px 6px white - 70;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   .today {
     font-weight: bold;
     color: #2da728;

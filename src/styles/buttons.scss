@@ -37,7 +37,7 @@
   border: none;
   border-bottom: 8px solid #686bbf - 15;
   border-left: 5px solid #9090bf;
-  box-shadow: 5px 6px 6px #f0d9da - 70;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 .coat_button:hover {
   background-color: #686bbf + 30;
@@ -49,7 +49,7 @@
   transition: all 10ms;
   border-left: none;
   border-bottom: 3px solid #686bbf + 15;
-  box-shadow: 2px 2px 4px #f0d9da - 70;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 .coat_button:focus {
   outline: none;
@@ -64,7 +64,7 @@
   border: none;
   border-bottom: 8px solid #ffc107 - 15;
   border-left: 5px solid #ffd653;
-  box-shadow: 5px 6px 6px #f0d9da - 70;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 .shoes_button:hover {
   background-color: #ffc107 + 20;
@@ -76,7 +76,7 @@
   transition: all 10ms;
   border-left: none;
   border-bottom: 3px solid #ffc107 + 5;
-  box-shadow: 2px 2px 4px #f0d9da - 70;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 .shoes_button:focus {
   outline: none;
@@ -93,7 +93,7 @@
   border: none;
   border-bottom: 8px solid $success - 15;
   border-left: 5px solid $success + 15;
-  box-shadow: 5px 6px 6px white - 70;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 .sign_in_button:hover {
   background-color: $success + 15;
@@ -105,7 +105,7 @@
   transition: all 10ms;
   border-left: none;
   border-bottom: 3px solid $success;
-  box-shadow: 2px 2px 4px white - 70;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 .sign_in_button:focus {
   outline: none;
@@ -126,7 +126,7 @@
     border: none;
     border-bottom: 8px solid $primary - 15;
     border-left: 5px solid $primary + 15;
-    box-shadow: 5px 6px 6px white - 70;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   }
   .edit_button:hover {
     background-color: $primary + 15;
@@ -138,7 +138,7 @@
   .edit_button:active {
     border-left: none;
     border-bottom: 3px solid $primary;
-    box-shadow: 2px 2px 4px white - 70;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   }
   .edit_button:focus {
     outline: none;
@@ -153,7 +153,7 @@
     border: none;
     border-bottom: 8px solid $important - 15;
     border-left: 5px solid $important + 15;
-    box-shadow: 5px 6px 6px white - 70;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   }
   .cancel_button:hover {
     background-color: $important + 15;
@@ -164,7 +164,7 @@
   .cancel_button:active {
     border-left: none;
     border-bottom: 3px solid $important;
-    box-shadow: 2px 2px 4px white - 70;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   }
   .cancel_button:focus {
     outline: none;

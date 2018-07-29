@@ -1,6 +1,4 @@
 import React from 'react';
-// import moment from 'moment';
-// import uuid from 'uuid';
 import DependantFormItem from './DependantFormItem';
 import { addDependant } from '../actions/customers';
 import { Link } from 'react-router-dom';

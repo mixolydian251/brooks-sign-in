@@ -21,7 +21,7 @@
       text-shadow: 1px 1px 0 #333333 - 30;
       border-left: 5px solid #333333 + 15;
       border-bottom: 8px solid #333333 - 15;
-      box-shadow: 5px 6px 6px white - 70;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
     .remove_button:hover {
       background-color: #333333 + 15;
@@ -32,7 +32,7 @@
     .remove_button:active {
       border-left: none;
       border-bottom: 3px solid #333333;
-      box-shadow: 2px 2px 4px white - 70;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     }
     .remove_button:focus {
       outline: none;

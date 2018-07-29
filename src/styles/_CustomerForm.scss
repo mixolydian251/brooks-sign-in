@@ -77,7 +77,7 @@
   .dependant_card {
     background-color: #a1e3e3;
     border-bottom: 8px solid #a1e3e3 - 10;
-    box-shadow: 5px 6px 6px white - 70;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     .form_item {
       display: flex;
       justify-content: flex-start;

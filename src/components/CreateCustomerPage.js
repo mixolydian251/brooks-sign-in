@@ -9,7 +9,6 @@ const CreateCustomerPage = props => {
       <h1 className="section_label">Create a new customer</h1>
       <CustomerForm
         onSubmitCustomer={customer => {
-          console.log(customer);
           props.dispatch(startAddCustomer(customer));
 
           // redirect user back to dashboard
